@@ -1,0 +1,735 @@
+// Colors
+@primary-color: #fff;
+@secondary-color: #615A5A;
+@hightlight-color: #312E2E;
+@highlight-color-blue: #214794;
+
+// Fonts
+@font-family__base: 'Arial Hebrew', sans-serif;
+@font-family__primary: 'Rubik', sans-serif;
+@font-family__primary-bold: 'Rubik Bold', sans-serif;
+@font-family__secondary: 'Saira', sans-serif;
+
+
+// Responsive
+@tablet:    ~"only screen and (max-width: 1024px)";
+@phone:    ~"only screen and (max-width: 767px)";
+
+
+// Mixins
+.button-hover() {
+    &:hover {
+        cursor: pointer;
+        background-color: @primary-color;
+        color: @highlight-color-blue;
+        transition: 0.2s;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+    color: @primary-color;
+    font-family: @font-family__base;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 15px 0;
+    font-family: @font-family__base;
+} 
+
+h3 {
+    font-size: 30px;
+}
+
+.description {
+    font-size: 16px;
+    font-family: @font-family__primary;
+    max-width: 448px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.has-max-width {
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;  
+}
+
+.app-intro {
+    background: linear-gradient(0deg, rgba(12,52,131,1) 0%, rgba(107,140,206,1) 100%);
+    max-height: 712px;
+
+    p {
+        color: @primary-color;
+        font-family: @font-family__primary;
+        font-size: 16px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 20px;
+
+    .logo {
+        padding: 20px;
+
+        img {
+            max-width: 180px;
+        }
+    }
+
+    .navigation {
+        align-self: center;
+
+        ul {
+            display: block;
+            list-style-type: none;
+
+            li {
+                display: inline;
+                margin-left: 100px;
+            }
+
+            a {
+                color: @primary-color;
+                font-size: 18px;
+                font-family: @font-family__base;
+                
+                &:hover {
+                    color: darken(@primary-color, 15%);
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+
+    .navigation > a {
+        display: none;
+    }
+}
+
+.intro-content {
+    display: flex;
+    background-size: cover;
+
+    .intro-description {
+        flex-basis: 55%;
+        max-width: 550px;
+        align-self: center;
+
+        h1 {
+            min-width: 300px;
+            max-width: 425px;
+        }
+    }
+
+    .mobile-screenshot {
+        padding-left: 10vw;
+
+        img {
+            max-width: 400px;
+            max-height: 600px;
+        }
+    }
+
+    .store-buttons {
+        text-align: right;
+        margin-top: 100px;
+
+        .app-store,
+        .play-store {
+            display: inline-block;
+            width: 220px;
+            padding: 10px;
+            margin-left: 20px;
+            border: 1px solid @primary-color;
+            border-radius: 10px;
+            font-family: @font-family__primary;
+
+            span {
+                color: @primary-color;
+
+                &:first-child {
+                    display: block;
+                    font-size: 15px;
+                }
+
+                &:last-child {
+                    font-size: 28px;
+                }
+            }
+
+            .button-hover();
+
+            &:hover {
+                &::before,
+                &::after {
+                    color: @highlight-color-blue;
+                }
+
+                > span {
+                    color: @highlight-color-blue;
+                }
+            }
+        }
+
+        .app-store {
+            position: relative; 
+
+            &::before {
+                content: 'Available at the';
+                color: @primary-color;
+            }
+
+            &::after {
+                position: absolute;
+                left: 20px;
+                top: 8px;
+                font-size: 50px;
+                color: @primary-color;
+                content: '\e800';
+                font-family: 'fontello';
+            }
+        }
+
+        .play-store {
+            position: relative;
+
+            &::before {
+                content: 'Get it on';
+                color: @primary-color;
+            }
+
+            &::after {
+                position: absolute;
+                left: 20px;
+                top: 10px;
+                font-size: 48px;
+                color: @primary-color;
+                content: '\e801';
+                font-family: 'fontello';
+            }
+        }
+    }
+}
+
+.app-features {
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    .description {
+        color: @secondary-color;
+    }
+
+    .features-slideshow {
+        position: relative;
+        margin-top: 70px;
+
+        .feature {
+            &-slide {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            &-screen,
+            &-caption {
+                align-self: center;
+                margin-left: 30px;
+            }
+
+            &-screen {
+                max-width: 400px;
+                max-height: 700px;
+            }
+
+            &-caption {
+                width: 50%;
+
+                h3 {
+                    color: @secondary-color;
+                    font-family: @font-family__secondary;
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 20px;
+                    max-width: 600px;
+                    color: @secondary-color;
+                    font-family: @font-family__primary;
+                }
+            }
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+          
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        
+        .nav-slideshow {
+            position: absolute;
+            right: 10%;
+            bottom: 25px;
+            text-align: right;
+
+            .prev,
+            .next {
+                margin: 0 10px;
+                font-family: @font-family__primary;
+            }
+
+            a:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.app-faq {
+    padding: 80px 0;
+    background: @hightlight-color;
+    color: @primary-color;
+
+    .question-container {
+        position: relative;
+        padding: 0 50px;
+
+        h4 {
+            padding: 10px;
+            font-size: 20px;
+            border-bottom: 1px solid @primary-color;
+            font-family: @font-family__secondary;
+
+            &:hover {
+                cursor: pointer;
+                color: darken(@primary-color, 20%);
+            }
+
+            &.active {
+                padding-bottom: 10px;
+                border: none;
+
+                + div {
+                    padding: 10px 40px 30px 10px;
+                    border-bottom: 1px solid @primary-color;
+                }
+
+                &:before { 
+                    transform: rotate(90deg); 
+                }
+                
+                &:after { 
+                    top: 15px;
+                    transform: rotate(180deg); 
+                }
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                background-color: white;
+                transition: transform 0.25s ease-out;
+            }
+    
+            /* Vertical line */
+            &:before{
+                top: 5px;
+                right: 80px;
+                width: 3px;
+                height: 20px;
+                margin-left: -2px;
+            }
+        
+            /* horizontal line */
+            &:after{
+                top: 30%;
+                right: 71px;
+                width: 20px;
+                height: 3px;
+                margin-top: -2px;
+            }
+            
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        div {
+            display: none;
+            font-size: 16px;
+            font-family: @font-family__primary;
+        }
+
+        p,
+        ul {
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        strong {
+            font-family: @font-family__primary-bold;
+        }
+    }
+
+    .faq-container {
+        margin-top: 100px;
+    }
+
+    table {
+        border: 1px solid @primary-color;
+
+        td {
+            padding: 8px;
+        }
+    }
+}
+
+.contact-us {
+    padding: 80px 20px;
+    background-color: @highlight-color-blue;
+
+    .contact-us-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .col-left {
+        display: inline-block;
+        width: 50%;
+        min-width: 300px;
+    }
+    
+    .section-title {
+        text-align: left;
+        color: @primary-color;
+    }
+
+    .description {
+        margin: inherit;
+    }
+
+    .fieldset {
+        margin-top: 60px;
+
+        .input-text {
+            display: block;
+            border: none;
+            padding: 8px 15px;
+            margin-bottom: 36px;
+            width: 100%;
+            height: 36px;
+            font-size: 13px;
+            font-family: @font-family__primary;
+        }
+
+        label {
+            display: block;
+            color: @primary-color;
+            margin: 5px 0;
+            font-family: @font-family__primary;
+        }
+
+        .input-textarea {
+            display: block;
+            width: 100%;
+            padding: 8px 15px;
+            border: none;
+        }
+
+        .btn-submit {
+            border: 1px solid @primary-color;
+            border-radius: 7px;
+            color: @primary-color;
+            background-color: transparent;
+            font-size: 15px;
+            padding: 15px 20px;
+            margin-top: 36px;
+            min-width: 148px;
+
+            .button-hover();
+        }
+    }
+
+    .col-right {
+        width: 38%;
+        display: inline-block;
+        padding-left: 5vw;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+    font-family: @font-family__primary;
+    opacity: 0.5;
+
+    a:first-child {
+        margin-right: 20px;
+    }
+
+    a:visited {
+       color: @hightlight-color;
+    }
+}
+
+.info-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: @font-family__primary;
+    font-size: 14px;
+
+    h2 {
+        text-align: center;
+    }
+
+    ul {
+        text-align: left;
+    }
+
+    strong {
+        display: block;
+        font-size: 18px;
+        font-family: @font-family__primary-bold;
+    }
+
+    a {
+        color: @hightlight-color;
+        font-family: @font-family__primary-bold;
+        text-decoration: underline;
+    }
+}
+
+@media @tablet {
+    .header .navigation {
+        ul li {
+            margin-left: 60px;
+        }
+
+        ul a {
+            font-size: 16px;
+        }
+    }
+
+    .intro-content {
+        padding: 0 36px;
+
+        .store-buttons {
+            margin-top: 60px;
+
+            .app-store,
+            .play-store {
+                width: 44%;
+                margin: 5px 0;
+
+                span:last-child {
+                    font-size: 18px;
+                    width: 53%;
+                    margin-left: auto;
+                }
+
+                &::before {
+                    font-size: 14px;
+                }
+
+                &::after {
+                    left: 18px;
+                    font-size: 38px;
+                }
+            }
+        }
+
+        .mobile-screenshot img {
+            max-height: 500px;
+            position: relative;
+            top: 26px;
+        }
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .app-features {
+        margin-top: 66px;
+
+        .description {
+            font-size: 14px;
+        }
+
+        .features-slideshow {
+            .feature-screen {
+                max-height: 600px;
+            }
+
+            .feature-caption h3 {
+                font-size: 24px;
+            }
+
+            .feature-caption p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .app-intro p {
+        font-size: 14px;
+    }
+
+    .app-faq {
+        padding: 66px 0;
+    }
+
+    .app-faq .question-container {
+        padding: 0 25px;
+
+        h4 {
+            font-size: 16px;
+
+            &::before {
+                top: 18px;
+                right: 52px;
+                width: 3px;
+                height: 17px;
+            }
+
+            &::after {
+                top: 27px;
+                right: 45px;
+                width: 17px;
+            }
+
+
+            &.active:after {
+                top: 27px;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            transition: 1s ease-in;
+            line-height: 1.5;
+        }
+    }
+
+    .contact-us {
+        padding: 60px 45px;
+
+        .fieldset {
+            margin-top: 30px;
+
+            .input-text {
+                margin-bottom: 24px;
+            }
+
+            .btn-submit {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    .copyright {
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media @phone {
+    .header {
+        padding: 10px;
+
+        .logo {
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 120px;
+        }
+
+        .navigation ul {
+            display: none;
+        }
+
+        .navigation > a {
+            display: block;
+            padding: 10px;
+        }
+
+        .fa-bars:before {
+            color: @primary-color;
+        }
+    }
+
+    .intro-content {
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .app-intro p {
+        font-size: 12px;
+    }
+
+    .app-features .description {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}

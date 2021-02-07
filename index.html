@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <link href="fonts.css" rel="stylesheet">
+  <link href="fontello.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Taxmap</title>
+</head>
+<body>
+  <section class="app-intro" id="home">
+    <header class="header has-max-width">
+      <div class="logo">
+        <a href="#" title="Taxmap"><img src="img/logo.png" alt="Logo" /></a>
+      </div>
+      <nav class="navigation">
+        <ul id="myLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <div class="intro-content has-max-width">
+      <div class="intro-description">
+        <h1>App That Suits You Better</h1>
+        <p>Curabitur blandit mollis lacus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet </p>
+        <div class="store-buttons">
+          <a href="#" class="app-store">
+            <span>App Store</span>
+          </a>
+          <a href="#" class="play-store">
+            <span>Play Store</span>
+          </a>
+        </div>
+      </div>
+      <div class="mobile-screenshot">
+        <img src="img/phone.png" />
+      </div>
+    </div>
+  </section>
+  <section class="app-features" id="features">
+    <div class="section-title">
+      <h2>Features</h2>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur   elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="features-slideshow has-max-width">
+      <div class="feature-slide fade">
+        <img src="img/phone.png" class="feature-screen">
+        <div class="feature-caption">
+          <h3>Tax Calendar</h3>
+          <p>Tax Calendar/Prompter showing Monthly, Quarterly and Annual Deadlines of Taxpayers.</p>
+        </div>
+      </div>
+      <div class="feature-slide fade">
+        <img src="img/phone.png" class="feature-screen">
+        <div class="feature-caption">
+          <h3>Deadline Notification.</h3>
+          <p class="description">Notification when a deadline is near( 5 days before and 2 days before the deadline)
+          </p>
+        </div>
+      </div>
+      <div class="feature-slide fade">
+        <img src="img/phone.png" class="feature-screen">
+        <div class="feature-caption">
+          <h3>Generate Form</h3>
+          <p>Ability to create, edit and print forms.</p>
+        </div>
+      </div>
+      <div class="feature-slide fade">
+        <img src="img/phone.png" class="feature-screen">
+        <div class="feature-caption">
+          <h3>News</h3>
+          <p>Weekly Tax News @ Front Page of the App.</p>
+        </div>
+      </div>
+      <div class="feature-slide fade">
+        <img src="img/phone.png" class="feature-screen">
+        <div class="feature-caption">
+          <h3>BIR Updates</h3>
+          <p>Important Updates from BIR(e.g. Estate Tax Amnesty) Shows at the bottom part of the calendar.</p>
+        </div>
+      </div>
+      
+      <div class="nav-slideshow">
+        <a class="prev" onclick="plusSlides(-1)">Prev</a>
+        <a class="next" onclick="plusSlides(1)">Next</a>
+      </div>
+    </div>
+  </section>
+  <section class="app-faq" id="faq">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur   elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <div class="faq-container has-max-width">
+      <div class="question-container">
+        <h4 class="question">When do I pay my taxes? What are the taxes I am supposed to pay in the Philippines?</h4>
+        <div>
+          <ul>
+            <li>Monthly
+              <ul>
+                <li>BIR Form 0619E - If you are renting, paying professionals or commissions.
+                  This is due for payment/filling on or before 10 th day of the following
+                  month.</li>
+                <li>BIR Form 1601C - For reporting salaries of employees and their
+                  corresponding withholding tax. This is due for payment/filling on or
+                  before 10 th day of the following month.</li>
+                <li>BIR Form 2550M - For VAT Individual. It is computed as 12% of monthly
+                  vatable sales less 12% of vatable purchases/expenses. This is due for
+                  payment/filling on or before 20 th day of the following month.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">What incomes are taxable in the Philippines?</h4>
+        <div>
+          <p>For Philippine citizens, all income earned within and outside the Philippines,
+            subject to the rules of reciprocity are subject to income taxes.</p>
+          <p>For Foreign Citizens, income earned within the Philippines is subject to
+            income.</p>
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">For Foreign Citizens, income earned within the Philippines is subject to
+          income.</h4>
+        <div>
+          <ul>
+            <li><p>For Sole Proprietor/Individuals:</p>
+              <table style="border-collapse: collapse; width: 100%; height: 162px;" border="1">
+                <tbody>
+                <tr style="height: 36px;">
+                  <td style="width: 33.3333%; height: 36px;">Amount of Net Taxable Income</td>
+                  <td style="width: 33.3333%; height: 36px;">&nbsp;</td>
+                  <td style="width: 33.3333%; height: 36px;">Rate</td>
+                </tr>
+                <tr style="height: 18px;">
+                  <td style="width: 33.3333%; height: 18px;">Over</td>
+                  <td style="width: 33.3333%; height: 18px;">But Not Over</td>
+                  <td style="width: 33.3333%; height: 18px;">&nbsp;</td>
+                </tr>
+                <tr style="height: 18px;">
+                  <td style="width: 33.3333%; height: 18px;">-</td>
+                  <td style="width: 33.3333%; height: 18px;">P250,000</td>
+                  <td style="width: 33.3333%; height: 18px;">0%</td>
+                </tr>
+                <tr style="height: 18px;">
+                  <td style="width: 33.3333%; height: 18px;">P250,000</td>
+                  <td style="width: 33.3333%; height: 18px;">P400,000</td>
+                  <td style="width: 33.3333%; height: 18px;">20% of the excess over P250,000</td>
+                </tr>
+                <tr style="height: 18px;">
+                  <td style="width: 33.3333%; height: 18px;">P400,000</td>
+                  <td style="width: 33.3333%; height: 18px;">P800,000</td>
+                  <td style="width: 33.3333%; height: 18px;">P30,000 + 25% of the excess over P400,000</td>
+                </tr>
+                <tr style="height: 18px;">
+                  <td style="width: 33.3333%; height: 18px;">P800,000</td>
+                  <td style="width: 33.3333%; height: 18px;">P2,000,000</td>
+                  <td style="width: 33.3333%; height: 18px;">P130,000 + 30% of the excess over P800,000</td>
+                </tr>
+                <tr style="height: 18px;">
+                  <td style="width: 33.3333%; height: 18px;">P2,000,000</td>
+                  <td style="width: 33.3333%; height: 18px;">P8,000,000</td>
+                  <td style="width: 33.3333%; height: 18px;">P490,000 + 32% of the excess over P2,000,000</td>
+                </tr>
+                <tr style="height: 18px;">
+                  <td style="width: 33.3333%; height: 18px;">P8,000,000</td>
+                  <td style="width: 33.3333%; height: 18px;">&nbsp;</td>
+                  <td style="width: 33.3333%; height: 18px;">P2,410,000 + 35% of the excess over P8,000,000</td>
+                </tr>
+                </tbody>
+              </table>
+            </li>
+            <li><p>For Corporation</p>
+              <ul>
+                <li>30% - Corporate Income Tax (CIT) Rate. Generally, on net income from
+                  all sources.</li>
+                <li>2% - Minimum Corporate Income Tax (MCIT) on gross income, starting
+                  from the fourth year of commencement of business Operations. MCIT is
+                  imposed when CIT is less than MCIT.</li>
+                <li>10% - Proprietary educational institutions and non-profit hospitals, on
+                  net income if gross income from unrelated trade, business and other
+                  activities does not exceed 50% of the total gross income from all sources.</li>
+                <li>Exempt – Applicable non-stock, non-profit educational institutions (all
+                  assets and revenues used actually, directly and exclusively for
+                  educational purposes) and other non-profit organizations.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">Where do I pay my taxes?</h4>
+        <div>You pay your taxes to the ADB of your local Revenue District Office. For
+          taxpayers with branches, the taxes can be consolidated with the main office.
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">What happens if I do not pay my taxes?</h4>
+        <div>You can be subjected to Criminal, Civil, and Administrative penalties.
+          (Insert Link of Schedule of Compromise Penalty:
+          http://www.alasoplascpas.com/Tax/birFile/Annex-A-Revised-Schedule-of-
+          Compromise-Penalty.pdf)
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">What expenses are deductible in my income taxes?</h4>
+        <div>Expenses which are deductible are ordinary and necessary for the conduct
+          or trade or business or profession. However, expenses which are personal to the
+          business owners or entrepreneurs and do not contribute to earning the income are
+          not allowed as deductions.
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">Do I need an accountant to pay my taxes?</h4>
+        <div>No, as long as you know how to compute your tax due and the deadlines of
+          the payment.
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">Do I pay higher taxes if I own more properties?</h4>
+        <div>
+          <ul>
+            <li><p>For Land:</p>
+              <ul>
+                <li>Yes, because it is computed based on land area, zonal value and the type of
+                  land that you own.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">What taxes do I pay if I pass on my properties to my children?</h4>
+        <div>
+          <ul>
+            <li><p><strong>Donation/ Gift
+              Definition.Art. 725.</strong> Donation is an act of liberality whereby a person disposes
+              gratuitously of a thing or right in favor of another, who accepts it. (618a)</p>
+              <p><strong>Tax Paid. <em>Donor Tax</em></strong> - TRAIN simplifies the payment of donor’s taxes to a single
+              tax rate of 6% of net donations is imposed for gifts above P250,000 yearly
+              regardless of relationship to the donor.</p></li>
+            <li><p><strong>Succession Definition.</strong> It is a mode of acquisition by virtue of which the property, rights
+              and obligations to the extent of the value of the inheritance of a person are
+              transmitted through his death to another or others either by his will or by
+              operation of law.</p>
+              <p><strong>Tax Paid. <em>Estate Tax</em></strong> Instead of having a complicated tax schedule with
+                different rates, TRAIN reduces and restructures the estate tax to a low and single
+                tax rate of 6% based on the net value of the estate with a standard deduction of
+                P5 million and exemption for the first P10 million for the family home.</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="question-container">
+        <h4 class="question">Forms Available in Taxmap</h4>
+        <div>
+          <table style="border-collapse: collapse; width: 100%;" border="1">
+            <tbody>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p><strong>Form No.</strong></p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p><strong>Requirement</strong></p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p><strong>Deadline for manual filers</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>0605</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Payment Form 0 Annual Registration</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>January 31</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1601-C</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Monthly Remittance Return of Income Taxes Withheld on Compensation</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every 10th day of after the end of each month</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>0619-E</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Monthly Remittance Form for Creditable Income Taxes WIthheld (Expanded)</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every 10th day of after the end of each month</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>0619-F</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Monthly Remittance Form for Final Income Taxes Withheld</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every 10th day of after the end of each month</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1601-EQ</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Quarterly Remittance Return of Creditable Income Taxes Withheld (Expanded) (together with the Quarterly Alphabetical List of Payees)</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every Last Day of the month after the end of each quarter</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1601-FQ</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Quarterly Remittance Return of Final Income Taxes Withheld</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every Last Day of the month after the end of each quarter</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1604-CF</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Annual Information Return of Income Taxes Withheld on Compensation of Final Withholding Taxes</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>January 31</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1604-E</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Annual Information Return of Creditable Income Taxes Withheld (Expanded)</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>March 1</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>2550-M</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Monthly Value Added Tax Declaration</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every 20th day after the end of each month</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>2550-Q</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Quarterly Value Added Tax Return</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every 25th day after the end of each month</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>2551-Q</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Quarterly Percentage Tax Return</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>Every 25th day after the end of each month</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1701</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Annual Income Tax Return (for self-employed individuals)</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>April 15</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1701-Q</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Quarterly Income Tax Return (for self-employed individuals)</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>&nbsp;</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>- 1st Quarter</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>May 15 or 45 days after end of each quarter</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>&nbsp;</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>- 2nd Quarter</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>August 15 or 45 days after end of each quarter</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>&nbsp;</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>- 3rd Quarter</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>November 15 or 45 days after end of each quarter</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1702</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Annual Income Tax Return (for corporations and partnerships)</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>April 15</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>1702-Q</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>Quarterly Income Tax Return (for corporations and partnerships)</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>&nbsp;</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>- 1st Quarter</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>May 29 or 60 days after end of each quarter</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>&nbsp;</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>- 2nd Quarter</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>August 29 or 60 days after end of each quarter</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 19.2237%;" width="91">
+                <p>&nbsp;</p>
+              </td>
+              <td style="width: 51.2015%;" width="248">
+                <p>- 3rd Quarter</p>
+              </td>
+              <td style="width: 29.39%;" width="140">
+                <p>November 29 or 60 days after end of each quarter</p>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-us" id="contact">
+    <div class="contact-us-inner">
+      <div class="col-left">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur   elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <form class="fieldset" action="/action_page.php">
+          <input class="input-text" type="text" id="fname" name="fname" placeholder="First Name *" required>
+          <input class="input-text" type="text" id="lname" name="lname" placeholder="Last Name *" required>
+          <input class="input-text" type="email" id="email" name="email" placeholder="Email Address *" required>
+          <label for="message">Message:</label>
+          <textarea class="input-textarea" id="message" rows="8" cols="50"></textarea>
+          <input class="btn-submit" type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="col-right">
+        <img src="img/watermark.svg" alt="Taxmap logo" />
+      </div>
+    </div>
+  </section>
+  <div class="copyright">
+    <p>2020 © Taxmap. All Rights Reserved.</p>
+    <p><a href="/Site/privacy-policy.html" target="_blank">Privacy</a><a href="/Site/terms-conditions.html" target="_blank">Terms</a></p>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
