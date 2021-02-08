@@ -317,6 +317,11 @@ h3 {
     background: @hightlight-color;
     color: @primary-color;
 
+    a {
+        color: @primary-color;
+        text-decoration: underline;
+    }
+
     .question-container {
         position: relative;
         padding: 0 50px;
@@ -626,6 +631,10 @@ h3 {
 
     .app-faq {
         padding: 66px 0;
+
+        .faq-container {
+            margin-top: 60px;
+        }
     }
 
     .app-faq .question-container {
@@ -633,6 +642,7 @@ h3 {
 
         h4 {
             font-size: 16px;
+            padding-right: 48px;
 
             &::before {
                 top: 18px;
@@ -653,7 +663,14 @@ h3 {
             }
         }
 
-        p {
+        li {
+            margin-bottom: 10px;
+        }
+
+        p,
+        ul,
+        table,
+        div {
             font-size: 12px;
             transition: 1s ease-in;
             line-height: 1.5;
@@ -710,7 +727,40 @@ h3 {
     }
 
     .intro-content {
+        justify-content: center;
         padding: 0 16px;
+        height: 400px;
+
+        .intro-description {
+            max-width: none;
+            flex-basis: 0;
+        }
+
+        .store-buttons {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: right;
+
+            .app-store,
+            .play-store {
+                width: 50%;
+                padding: 6px;
+                text-align: right;
+                font-size: 11px;
+
+                span:last-child {
+                    font-size: 15px;
+                }
+
+                &::after {
+                    font-size: 27px;
+                }
+            }
+        }
+    }
+
+    .mobile-screenshot {
+        display: none;
     }
 
     h1 {
@@ -731,5 +781,78 @@ h3 {
 
     .description {
         font-size: 12px;
+    }
+
+    .app-features {
+        .features-slideshow {
+            margin-top: 30px;
+
+            .feature-slide {
+                flex-direction: column;
+                padding-bottom: 40px;
+            }
+
+            .feature-caption {
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 23px;
+                }
+            }
+
+            .feature-screen {
+                margin-left: 0;
+                max-height: 300px;
+            }
+
+            .nav-slideshow {
+                left: 50%;
+                right: 0;
+                bottom: 0;
+                transform: translateX(-50%);
+                text-align: center;
+            }
+        }
+    }
+
+    .app-faq {
+        padding: 46px 0;
+
+        .faq-container {
+            margin-top: 20px;
+        }
+
+        .question-container {
+            padding: 0;
+
+            h4 {
+                padding-right: 34px;
+                font-size: 12px;
+
+                &.active:after {
+                    top: 22px;
+                }
+
+                &::before {
+                    top: 15px;
+                    right: 16px;
+                    width: 3px;
+                    height: 13px;
+                }
+
+                &::after {
+                    top: 22px;
+                    right: 11px;
+                    width: 13px;
+                }
+            }
+        }
     }
 }
