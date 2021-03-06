@@ -385,6 +385,7 @@ h3 {
   width: 100%;
   padding: 8px 15px;
   border: none;
+  font-family: 'Rubik', sans-serif;
 }
 .contact-us .fieldset .btn-submit {
   border: 1px solid #fff;
@@ -565,6 +566,7 @@ h3 {
 @media only screen and (max-width: 767px) {
   .header {
     padding: 10px;
+    flex-direction: row-reverse;
   }
   .header .logo {
     padding: 10px;
@@ -573,13 +575,48 @@ h3 {
     max-width: 120px;
   }
   .header .navigation ul {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: white;
+    margin-top: 0;
+    width: 100%;
+    padding: 57px 8px 0 0;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .header .navigation ul li {
+    margin-left: 36px;
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid #615A5A;
+  }
+  .header .navigation ul li a {
+    color: #312E2E;
+    font-weight: bold;
+  }
+  .header .navigation ul li a:hover {
+    color: #312E2E;
+  }
+  .header .navigation ul.active {
+    opacity: 1;
+  }
+  .header .navigation ul.active ~ a .fa-bars:before {
+    color: #312E2E;
   }
   .header .navigation > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    z-index: 3;
     display: block;
-    padding: 10px;
+    padding: 30px;
   }
   .header .fa-bars:before {
+    font-size: 20px;
     color: #fff;
   }
   .intro-content {
@@ -644,9 +681,10 @@ h3 {
   .app-features .features-slideshow .feature-caption h3 {
     font-size: 18px;
   }
-  .app-features .features-slideshow .feature-caption p {
+  .app-features .features-slideshow .feature-caption .description {
     font-size: 14px;
     line-height: 23px;
+    min-height: 50px;
   }
   .app-features .features-slideshow .feature-screen {
     margin-left: 0;
@@ -685,6 +723,28 @@ h3 {
     top: 22px;
     right: 11px;
     width: 13px;
+  }
+  .contact-us {
+    padding: 30px 25px;
+  }
+  .contact-us .fieldset .input-text {
+    width: 97%;
+    height: 26px;
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+  .contact-us .fieldset label {
+    font-size: 12px;
+  }
+  .contact-us .fieldset .btn-submit {
+    min-width: 111px;
+    font-size: 12px;
+    padding: 8px 20px;
+    margin-top: 16px;
+  }
+  .contact-us .fieldset .input-textarea {
+    font-size: 12px;
+    padding: 8px 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -54,7 +54,7 @@
         <img src="img/phone.png" class="feature-screen">
         <div class="feature-caption">
           <h3>Tax Calendar</h3>
-          <p>Tax Calendar/Prompter showing Monthly, Quarterly and Annual Deadlines of Taxpayers.</p>
+          <p class="description">Tax Calendar/Prompter showing Monthly, Quarterly and Annual Deadlines of Taxpayers.</p>
         </div>
       </div>
       <div class="feature-slide fade">
@@ -69,21 +69,21 @@
         <img src="img/phone.png" class="feature-screen">
         <div class="feature-caption">
           <h3>Generate Form</h3>
-          <p>Ability to create, edit and print forms.</p>
+          <p class="description">Ability to create, edit and print forms.</p>
         </div>
       </div>
       <div class="feature-slide fade">
         <img src="img/phone.png" class="feature-screen">
         <div class="feature-caption">
           <h3>News</h3>
-          <p>Weekly Tax News @ Front Page of the App.</p>
+          <p class="description">Weekly Tax News @ Front Page of the App.</p>
         </div>
       </div>
       <div class="feature-slide fade">
         <img src="img/phone.png" class="feature-screen">
         <div class="feature-caption">
           <h3>BIR Updates</h3>
-          <p>Important Updates from BIR(e.g. Estate Tax Amnesty) Shows at the bottom part of the calendar.</p>
+          <p class="description">Important Updates from BIR(e.g. Estate Tax Amnesty) Shows at the bottom part of the calendar.</p>
         </div>
       </div>
       
@@ -534,17 +534,17 @@
     </div>
   </section>
   <div class="copyright">
-    <p>2020 © Taxmap. All Rights Reserved.</p>
+    <p>2021 &#169; Taxmap. All Rights Reserved.</p>
     <p><a href="/privacy-policy.html" target="_blank">Privacy</a><a href="/terms-conditions.html" target="_blank">Terms</a></p>
   </div>
   <script src="script.js"></script>
   <script>
     function myFunction() {
       var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
+      if (x.classList.contains('active')) {
+        x.classList.remove("active");
       } else {
-        x.style.display = "block";
+        x.classList.add("active");
       }
     }
   </script>
